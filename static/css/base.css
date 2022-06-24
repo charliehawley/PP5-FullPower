@@ -1,0 +1,56 @@
+html {
+    height: 100%;
+}
+
+* {
+    text-decoration: none;
+}
+
+body {
+    background: url('/static/img/texture3.jpg') repeat;
+    color: #000;
+    height: calc(100vh - 164px); /* 164px is header size */
+}
+
+a { 
+    color: inherit; 
+} 
+
+#triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    background-color: #000;
+    transform: translate(-50%,-50%) rotate(45deg);    
+}
+
+/* #logo-img {
+    background-image: url('../media/logo_smaller.png');
+    height: 300px;
+    width: 300px;
+} */
+
+/* #logo {
+    display: block;
+    background: url('{ MEDIA_URL }logo_smaller.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+} */
+
+/* #main-logo-link {
+    z-index: 2;
+} */
+
+#main-logo-link>img {
+    height: 164px;
+    /* mix-blend-mode: difference; */
+}
+
+@media (min-width: 992px){
+    .header-container {
+        padding-top: 164px;
+    }
+}
