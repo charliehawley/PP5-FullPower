@@ -10,14 +10,46 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
+    <div class="container h-100 mt-5">
+        <div class="row">
+            <div class="col-4 m-auto">
                 <h1>New Releases:</h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="" class="btn btn-lg rounded-0 border border-dark text-uppercase py-2">Shop</a>
-                    </h4>
+                <!-- Bootstrap carousel for music releases -->
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=874693183/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://b0ssfp.bandcamp.com/track/monkey-thoughts-2">Monkey Thoughts by BOSS</a></iframe>
+                      </div>
+                      <div class="carousel-item">
+                        <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1162109626/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://nuzunuzu.bandcamp.com/album/zu-box-1">ZU BOX *1 by NUZU</a></iframe>
+                      </div>
+                      <div class="carousel-item">
+                        <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1802918734/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://lendmethetwelve.bandcamp.com/album/songs-of-interest">Songs Of Interest by Lend Me The Twelve</a></iframe>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 mx-auto">
+                <h1>Merch:</h1>
+                <!-- Bootstrap carousel for merch -->
+                <div id="merch-carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item merch-carousel active">
+                        <img src="/media/artwork/broken_glass.jpg" alt="">
+                        </div>
+                        <div class="carousel-item merch-carousel">
+                        <img src="/media/artwork/devils_avocado.jpg" alt="">
+                        </div>
+                        <div class="carousel-item merch-carousel">
+                        <img src="/media/artwork/familiar_action.jpg" alt="">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="my-auto mx-auto">
+                    <a href="" class="nav-link active tape-link"><img class="tape-link-img" src="/media/tape.png" alt=""><h2 class="link-text">Shop</h2></a>
                 </div>
             </div>
         </div>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
 html {
     height: 100%;
 }
@@ -7,9 +9,10 @@ html {
 }
 
 body {
-    background: url('/static/img/texture3.jpg') repeat;
+    background: url('/media/texture3.jpg') repeat;
     color: #000;
-    height: calc(100vh - 164px); /* 164px is header size */
+    /* height: calc(100vh - 250px); */
+    position: relative;
 }
 
 a { 
@@ -20,37 +23,98 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
     background-color: #000;
     transform: translate(-50%,-50%) rotate(45deg);    
 }
 
-/* #logo-img {
-    background-image: url('../media/logo_smaller.png');
-    height: 300px;
-    width: 300px;
-} */
-
-/* #logo {
-    display: block;
-    background: url('{ MEDIA_URL }logo_smaller.png') no-repeat center center fixed;
-    background-size: cover;
-    height: 150px;
-    width: 150px;
-} */
-
-/* #main-logo-link {
-    z-index: 2;
-} */
+#header-bg {
+    background: url('/media/texture3.jpg');
+}
 
 #main-logo-link>img {
-    height: 164px;
+    height: 120px;
     /* mix-blend-mode: difference; */
 }
 
+.link-text {
+    color: rgb(155, 155, 155);
+    font-family: Rock Salt;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 30px;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    mix-blend-mode: difference;
+}
+
+.tape-link {
+    width: 300px;
+    position: relative;
+}
+
+.tape-link-img {
+    width: 100%;
+    height: 100%;
+}
+
+.merch-carousel {
+    width: 300px;
+    height: 300px;
+}
+
+.merch-carousel>img {
+    width: 300px;
+    height: 300px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+#triangle-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 75vw;
+    width: 400px;
+    height: 400px;
+    background-color: #000;
+    transform: translate(50%,50%) rotate(45deg);    
+}
+
+#triangle-bottom>a {
+    /* color: #fff;
+    display: block;
+    margin: 20px 20px;
+    transform: rotate(-45deg); 
+    width: 435px;
+    height: 49px; */
+}
+
+.social-links {
+    /* display: block;
+    position: relative;
+    font-size: 3rem; */
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
 @media (min-width: 992px){
+    .fixed-top-desktop-only{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
     .header-container {
-        padding-top: 164px;
+        padding-top: 250px;
     }
 }
