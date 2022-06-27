@@ -2,34 +2,39 @@
 {% load static %}
 
 {% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block content %}
     <div class="container h-100 mt-5">
-        <div class="row">
-            <div class="col-4 m-auto">
-                <h1>New Releases:</h1>
-                <!-- Bootstrap carousel for music releases -->
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <a href="" class="music-link"><img src="" alt="" class="album-thumb"></a>
-                      </div>
-                      <div class="carousel-item">
-                        <a href="" class="music-link"><img src="" alt="" class="album-thumb"></a>
-                      </div>
-                      <div class="carousel-item">
-                        <a href="" class="music-link"><img src="" alt="" class="album-thumb"></a>
-                      </div>
+      <div class="row">
+          <div class="col-4 m-auto">
+              <h1>New Releases:</h1>
+              <!-- Bootstrap carousel for music releases -->
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    {% for music in music %}
+                    <div class="carousel-item active">
+                      <a href="" class="music-link"><img src="" alt="" class="album-thumb"></a>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4 mx-auto">
-                <h1>All music</h1>
-                
-            </div>
-        </div>
+                    {% endfor %}
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-4 mx-auto">
+              <h1>All music:</h1>
+              <div class="col-12">
+                {% for music in music %}
+                  <iframe class="music-embed" src="{{ music.embed_code }}" frameborder="0"></iframe>
+                {% endfor %}
+              </div>
+          </div>
+      </div>
     </div>
 {% endblock %}

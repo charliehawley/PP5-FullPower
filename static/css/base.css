@@ -70,6 +70,24 @@ a {
     height: 300px;
 }
 
+/* --------------------------------music---------------------------------- */
+
+.music-embed {
+    border: 0; 
+    width: 350px; 
+    height: 470px;
+}
+
+/* --------------------------------products---------------------------------- */
+
+.product-link {
+    display: inline;
+}
+
+.product-link-image {
+    max-width: 300px;
+}
+
 footer {
     position: fixed;
     bottom: 0;
