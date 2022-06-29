@@ -56,19 +56,30 @@
           </a>
       </div>
       <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
-        <form method="GET" action="">
-          <div class="input-group w-50 offset-3">
-            <input class="form-control border border-black rounded-0" type="text" name="q"
-              placeholder="Search for music or merch">
-            <div class="input-group-append">
-              <button class="form-control btn btn-white border border-black rounded-0" type="submit">
-                <span class="icon">
-                  <i class="fas fa-search"></i>
-                </span>
-              </button>
-            </div>
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center text-center">
+              <form method="GET" action="">
+                <div class="input-group w-80">
+                  <input class="form-control border border-black rounded-0" type="text" name="q"
+                    placeholder="Search for music or merch">
+                  <div class="input-group-append">
+                    <button class="form-control btn btn-white border border-black rounded-0" type="submit">
+                      <span class="icon">
+                        <i class="fas fa-search"></i>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </form>
           </div>
-        </form>
+        </div>
+        <div class="row w-100">
+          <nav class="navbar navbar-expand-lg navbar-light w-100 mx-auto">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation"></button>
+              {% include 'includes/mobile-top-header.html' %}
+              {% include 'includes/main-nav.html' %}
+          </nav>
+        </div>
       </div>
       <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
         <ul class="m-0">
@@ -108,13 +119,6 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div class="row w-100 mx-auto">
-      <nav class="navbar navbar-expand-lg navbar-light w-100 mx-auto">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation"></button>
-          {% include 'includes/mobile-top-header.html' %}
-          {% include 'includes/main-nav.html' %}
-      </nav>
     </div>
   </header>
 
