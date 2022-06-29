@@ -43,7 +43,6 @@ a {
     font-family: Rock Salt;
     font-size: 2rem;
     text-align: center;
-    padding: 0 30px;
     position: absolute;
     top: 30%;
     left: 20%;
@@ -51,7 +50,7 @@ a {
 }
 
 .tape-link {
-    width: 300px;
+    width: 200px;
     position: relative;
 }
 
