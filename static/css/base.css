@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Source+Sans+Pro:wght@600;700;900&display=swap');
 
 html {
     height: 100%;
@@ -11,6 +11,8 @@ html {
 body {
     background: url('/media/texture3.jpg') repeat;
     color: #000;
+    font-family: Source Sans Pro, sans-serif;
+    font-weight: 900;
     /* height: calc(100vh - 250px); */
     position: relative;
 }
@@ -78,8 +80,9 @@ a {
 
 .music-embed {
     border: 0; 
-    width: 350px; 
+    width: 100%; 
     height: 470px;
+    mix-blend-mode: luminosity;
 }
 
 /* --------------------------------products---------------------------------- */
@@ -90,6 +93,15 @@ a {
 
 .product-link-image {
     max-width: 300px;
+}
+
+.brutal-card {
+    max-width: 90%;
+    mix-blend-mode: exclusion;
+}
+
+.brutal-img {
+    mix-blend-mode:exclusion;
 }
 
 

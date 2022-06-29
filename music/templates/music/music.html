@@ -11,10 +11,10 @@
 
 {% block content %}
     <div class="container h-100 mt-5">
-      <div class="row">
+      <!-- <div class="row">
           <div class="col-4 m-auto">
               <h1>New Releases:</h1>
-              <!-- Bootstrap carousel for music releases -->
+              Bootstrap carousel for music releases
               <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner">
                     {% for music in music %}
@@ -25,16 +25,49 @@
                   </div>
               </div>
           </div>
-      </div>
+      </div> -->
       <div class="row">
-          <div class="col-4 mx-auto">
-              <h1>All music:</h1>
-              <div class="col-12">
-                {% for music in music %}
+        {% for music in music %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
                   <iframe class="music-embed" src="{{ music.embed_code }}" frameborder="0"></iframe>
-                {% endfor %}
-              </div>
-          </div>
+            </div>
+        {% endfor %}
+        <!-- {% for music in music %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
+                <div class="card brutal-card h-100 mx-auto">
+                    {% if music.embed_code %}
+                    <a href="">
+                      <iframe class="music-embed" src="{{ music.embed_code }}" frameborder="0"></iframe>
+                    </a>
+                    {% else %}
+                    <a href=""><img class="card-img-top img-fluid brutal-img" src="{{ music.image.url }}" alt="{{ music.name }}">
+                    </a>
+                    {% endif %}
+                    <div class="card-body p-2">
+                        <p class="mb-0">{{ music.name }}</p>
+                    </div>
+                    <div class="card-footer bg-white pt-0 text-left">
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead mb-0 text-left font-weight-bold">£{{ music.price }}</p>
+                                {% if music.category %}
+                                <p class="small mt-1 mb-0">
+                                    <a class="text-muted" href="{% url 'music' %}?category={{ music.category.name }}">
+                                        {{ music.category.friendly_name }}
+                                    </a>
+                                </p>
+                                {% endif %}
+                                {% if request.user.is_superuser %}
+                                    <small>
+                                        <a href="">Edit</a> | 
+                                        <a class="text-success" href="">Delete</a>
+                                    </small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %} -->
       </div>
-    </div>
 {% endblock %}
