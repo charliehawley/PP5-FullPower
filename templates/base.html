@@ -58,7 +58,7 @@
       <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
         <div class="row">
           <div class="col-12 d-flex justify-content-center text-center">
-              <form method="GET" action="">
+              <form method="GET" action="{% url 'products' %}">
                 <div class="input-group w-80">
                   <input class="form-control border border-black rounded-0" type="text" name="q"
                     placeholder="Search for music or merch">
@@ -133,15 +133,17 @@
   {% endblock %}
 
   <footer>
-    <div id="triangle-bottom">
-      <div class="row">
-        <div class="col-1 h-50">
-          <a class="my-auto" href="https://bfpbfpbfp.bandcamp.com/music" target="_blank"><i class="fa-brands fa-bandcamp social-links"></i></a>
+    <div class="footer-container">
+      <div id="triangle-bottom"></div>
+      <!-- <div class="col-1 h-50 d-inline-block social-links">
+        <a class="my-auto social-links" href="" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+      </div> -->
+      <div class="row" id="row-45">
+        <div class="col-1 h-50 d-inline-block social-links">
+          <a class="my-auto social-links" href="https://bfpbfpbfp.bandcamp.com/music" target="_blank"><i class="fa-brands fa-bandcamp fa-2x"></i></a>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-1 h-50">
-          <a class="my-auto" href="https://www.instagram.com/fullpowerrecords/" target="_blank"><i class="fa-brands fa-instagram social-links"></i></a>
+        <div class="col-1 h-50 d-inline-block social-links">
+          <a class="my-auto social-links" href="https://www.instagram.com/fullpowerrecords/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
         </div>
       </div>
     </div>

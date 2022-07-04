@@ -51,6 +51,10 @@
                           <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                           {% if product.category %}
                           <p class="small mt-1 mb-0">
+                              <a class="text-muted" href="{% url 'products' %}?category={{ product.band.name }}">
+                                  {{ product.band.friendly_name }}
+                              </a>
+                              <br>
                               <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
                                   {{ product.category.friendly_name }}
                               </a>
