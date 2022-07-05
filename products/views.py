@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Category
+from .models import Product, Category, Band
 
 # Create your views here.
 def all_products(request):
@@ -10,6 +10,13 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     category = None
+    band = None
+
+    if request.GET:
+        if 'band' in request.GET:
+            band = request.GET['band'].split(',')
+            products = products.filter(band__name__in=band)
+            band = Band.objects.filter(name__in=band)
 
     if request.GET:
         if 'category' in request.GET:
