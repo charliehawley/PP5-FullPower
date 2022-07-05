@@ -26,13 +26,17 @@
             {% endfor %}
         </div>
         <div class="col-5">
-            {% for product in merch %}
-                    <a class="mr-3 thick-border" href="{% url 'product-details' product.id%}"><img class="merch-thumb" src="{{ product.image_url }}" alt=""></a>
-            {% endfor %}
-            <a href="{% url 'products' %}" class="nav-link active" id="shop-link">
-                <img class="tape-link-img" src="/media/tape.png" alt="">
-                <p id="shop-link-text">Shop</p>
-            </a>
+            <div class="row home-merch-row">
+                {% for product in merch %}
+                        <a class="thick-border" href="{% url 'product-details' product.id%}"><img class="merch-thumb" src="{{ product.image_url }}" alt=""></a>
+                {% endfor %}
+            </div>
+            <div class="row home-merch-row">
+                <a href="{% url 'products' %}" class="nav-link active" id="shop-link">
+                    <img class="tape-link-img" src="/media/tape.png" alt="">
+                    <p id="shop-link-text">Shop</p>
+                </a>
+            </div>
         </div>
     </div>
 </div>
