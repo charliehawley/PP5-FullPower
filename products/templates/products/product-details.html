@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid m-5 w-100">
+    <div class="card w-100 brutal-card">
+        <div class="col-6 mt-3">
+            <img class="img-fluid brutal-img" src="{{ product.image.url }}" alt="{{ product.name }}">
+        </div>
+        <div class="col-6 mt-3">
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

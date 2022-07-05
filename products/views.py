@@ -4,6 +4,17 @@ from django.db.models import Q
 from .models import Product, Category, Band
 
 # Create your views here.
+def product_details(request, product_id):
+    """ Returns product details page """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        'product': product
+    }
+
+    return render(request, 'products/product-details.html', context)
+
 def all_products(request):
     """ Returns products page """
 
