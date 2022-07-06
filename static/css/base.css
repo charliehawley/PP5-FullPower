@@ -142,6 +142,32 @@ a {
 }
 
 
+/* --------------------------------bag---------------------------------- */
+
+#shopping-bag {
+    width: 60% !important;
+}
+
+#bag-to-shop {
+    position: relative;
+    width: 20px;
+}
+
+.bag-buttons {
+    width: 200px;
+}
+
+#bag-button-text {
+    color: rgb(155, 155, 155);
+    font-family: Rock Salt;
+    font-size: 110%;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    mix-blend-mode: difference;
+}
+
 /* --------------------------------footer---------------------------------- */
 
 footer {

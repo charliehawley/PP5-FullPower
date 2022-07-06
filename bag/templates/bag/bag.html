@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+  <div class="container header-container">
+      <div class="row">
+          <div class="col"></div>
+      </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="container card mt-5" id="shopping-bag">
+    <div class="row mt-3">
+      <div class="col">
+        <h2>Shopping bag:</h2>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        {% if bag_items %}
+          <div class="table-responsive rounded"></div>
+        {% else %}
+        <p>Your bag is empty.</p>
+          <div class="bag-buttons">
+            <a href="{% url 'products' %}" id="bag-to-shop">
+                <img class="tape-link-img" src="/media/tape.png" alt="">
+                <p id="bag-button-text">Back to shop?</p>
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
