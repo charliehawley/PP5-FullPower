@@ -10,15 +10,62 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid m-5 w-100">
-    <div class="card w-100 brutal-card">
-        <div class="col-6 mt-3">
-            <img class="img-fluid brutal-img" src="{{ product.image.url }}" alt="{{ product.name }}">
-        </div>
-        <div class="col-6 mt-3">
-            <h2>{{ product.name }}</h2>
-            <p>{{ product.description }}</p>
+<div class="container-fluid my-3 mx-auto">
+    <div class="card brutal-card">
+        <div class="row">
+            <div class="col-5">
+                <div class="col my-3">
+                    <img class="brutal-img" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="col mt-3">
+                    <h2>{{ product.name }}</h2>
+                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                    {% if product.category %}
+                    <span>
+                        <a class="text-muted" href="{% url 'products' %}?band={{ product.band.name }}">
+                            {{ product.band.friendly_name }} | 
+                        </a>
+                    </span>
+                    <span>
+                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                            {{ product.category.friendly_name }}
+                        </a>
+                    </span>
+                    {% endif %}
+                    <p>{{ product.description }}</p>
+                </div>
+                <div class="container">
+                    <form class="form" action="" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <p class="mt-3"><strong>Quantity:</strong></p>
+                                <div class="form-group w-50">
+                                    <div class="input-group">
+                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-12 mb-3">
+                                <a href="{% url 'products' %}" class="bag-button-container">
+                                    <img class="tape-link-img bag-buttons" src="/media/tape-inv.png" alt="">
+                                    <p class="no-diff details-button-text">Back to shop?</p>
+                                </a>
+                                <div class="bag-button-container">
+                                    <img class="tape-link-img bag-buttons offset-1" src="/media/tape-inv.png" alt="">
+                                    <input type="submit" class="bag-buttons no-diff details-button-text" value="Add to Bag">
+                                </div>
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="bottom-spacer"></div>
 </div>
 {% endblock %}

@@ -5,7 +5,10 @@ def bag_contents(request):
     bag_items = []
     total = 0
     product_count = 0
-    delivery = 4
+    if product_count:
+        delivery = 4
+    else:
+        delivery = 0
     grand_total = delivery + total
 
     context = {
