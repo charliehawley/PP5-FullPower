@@ -79,7 +79,8 @@ a {
 .home-merch-row {
     height: 480px;
     background: url(/media/bg.png) fixed;
-    background-size: contain;
+    background-size: 60%;
+    background-position: calc(50% + 200px) 150px;
 }
 
 #shop-link {
@@ -129,12 +130,15 @@ a {
 
 .merch-thumb {
     max-height: 150px;
+    margin: auto;
 }
 
 .thick-border {
     height: min-content;
     padding: none !important;
-    margin: none !important;
+    /* margin: none !important; */
+    margin: auto;
+    /* border: 10px solid #000; */
 }
 
 
