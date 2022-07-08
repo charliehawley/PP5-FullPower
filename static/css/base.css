@@ -126,6 +126,7 @@ a {
     /* max-height: 350px; */
     max-width: 100%;
     margin: auto;
+    background-color: #fff;
     mix-blend-mode: exclusion;
 }
 
@@ -153,7 +154,7 @@ a {
 .details-button-text {
     color: rgba(255, 255, 255, 0.75);
     font-family: Rock Salt;
-    font-size: 110%;
+    font-size: 100%;
     position: absolute;
     top: 10%;
     left: 10%;
