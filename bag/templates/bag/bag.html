@@ -74,8 +74,9 @@
       </div>
       {% else %}
       <p class="lead mb-5">Your bag is empty.</p>
-      <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-        <span class="text-uppercase">Keep Shopping</span>
+      <a href="{% url 'products' %}" class="bag-button-container">
+          <img class="tape-link-img bag-buttons" src="/media/tape-inv.png" alt="">
+          <p class="no-diff details-button-text">Back to shop?</p>
       </a>
       {% endif %}
     </div>
