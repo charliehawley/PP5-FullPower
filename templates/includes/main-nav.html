@@ -1,13 +1,14 @@
 <!-- <div class="collapse navbar-collapse" id="main-nav"> -->
 <ul class="navbar-nav mx-auto" id="navbar-lg">
     <li class="nav-item col-4 mx-auto nav-list-pad">
-        <a href="{% url 'music' %}" class="nav-link active tape-link"><img class="tape-link-img" src="/media/tape.png" alt=""><h2 class="link-text">Music</h2></a>
+        <a href="{% url 'music' %}" class="nav-link active tape-link"><img class="tape-link-img" src="{{ MEDIA_URL }}tape.png" alt=""><h2 class="link-text">Music</h2></a>
     </li>
     <li class="nav-item col-4 mx-auto nav-list-pad">
-        <a href="{% url 'products' %}" class="nav-link active tape-link"><img class="tape-link-img" src="/media/tape.png" alt=""><h2 class="link-text">Merch</h2></a>
+        <a href="{% url 'products' %}" class="nav-link active tape-link"><img class="tape-link-img" src="{{ MEDIA_URL }}tape.png" alt=""><h2 class="link-text">Merch</h2></a>
     </li>
     <li class="nav-item col-4 mx-auto nav-list-pad">
-        <a href="" class="nav-link active tape-link"><img class="tape-link-img" src="/media/tape.png" alt=""><h2 class="link-text">Events</h2></a>
+        <a href="" class="nav-link active tape-link"><img class="tape-link-img" src="{{ MEDIA_URL }}tape.png" alt=""><h2 class="link-text">Events</h2></a>
+        
     </li>
 </ul>
 <!-- </div> -->
